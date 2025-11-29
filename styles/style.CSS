@@ -1,50 +1,166 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background: #f4f4f4;
+:root {
+    --primary-color: #007BFF; /* Azul para enlaces y botones */
+    --secondary-color: #343A40; /* Gris oscuro para fondo de contacto */
+    --text-color: #333;
+    --background-color: #F8F9FA; /* Gris claro */
+    --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Tipografía coherente [cite: 33] */
 }
 
-header {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+h1, h2, h3 {
+    margin-bottom: 0.5em;
+    color: var(--secondary-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Clases de Contraste y Sección [cite: 34] */
+.section {
+    padding: 40px 5%;
     text-align: center;
-    padding: 2rem;
-    background: #333;
+}
+
+.bg-light {
+    background-color: var(--background-color);
+}
+
+.bg-dark {
+    background-color: var(--secondary-color);
     color: #fff;
 }
 
-.avatar {
-    width: 120px;
+.bg-dark a {
+    color: #FFC107; /* Amarillo para enlaces en fondo oscuro */
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+/* PERFIL / HERO */
+.hero {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 60px 20px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid white;
 }
 
-section {
-    padding: 1.5rem;
-    max-width: 1000px;
-    margin: auto;
-    background: white;
-    margin-top: 1rem;
-    border-radius: 10px;
+.role {
+    font-size: 1.2em;
 }
 
-.project {
-    margin-bottom: 2rem;
+/* HABILIDADES */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
-.project img {
+.skill-chip {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+/* PROYECTOS (Responsive) */
+.projects-grid {
+    display: grid;
+    gap: 30px;
+    margin-top: 30px;
+    /* Configuración por defecto para CELULAR (~360px) [cite: 31] */
+    grid-template-columns: 1fr; 
+}
+
+.project-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.project-img {
     width: 100%;
-    max-width: 400px;
-    display: block;
-    margin-top: 1rem;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
-/* Responsivo */
-@media (max-width: 600px) {
-    body {
-        padding: 0;
-    }
+.project-title {
+    font-size: 1.5em;
+    padding: 0 15px;
+}
 
-    section {
-        margin: 0.5rem;
+.project-description, .project-tech {
+    padding: 0 15px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.project-link {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.project-link:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+/* CONTACTO */
+.contact-info p {
+    margin: 10px 0;
+}
+
+/* MEDIA QUERY para LAPTOP (~1366px) [cite: 32] */
+@media (min-width: 768px) {
+    .section {
+        padding: 60px 10%;
+    }
+    .projects-grid {
+        /* Muestra 3 proyectos por fila en pantallas grandes */
+        grid-template-columns: repeat(3, 1fr); 
+    }
+    .about-text {
+        max-width: 800px;
+        margin: 0 auto 20px;
     }
 }
