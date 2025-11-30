@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #007BFF; /* Azul para enlaces y botones */
-    --secondary-color: #343A40; /* Gris oscuro para fondo de contacto */
+    --primary-color: #B39CD0;
+    --secondary-color: #5F4B8B; 
     --text-color: #333;
-    --background-color: #F8F9FA; /* Gris claro */
+    --background-color: #F5F0FF; 
     --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Tipografía coherente [cite: 33] */
 }
 
@@ -49,7 +49,7 @@ a:hover {
 }
 
 .bg-dark a {
-    color: #FFC107; /* Amarillo para enlaces en fondo oscuro */
+    color: #F0F0F0 
 }
 
 .section-title {
@@ -59,8 +59,15 @@ a:hover {
 
 /* PERFIL / HERO */
 .hero {
-    background-color: var(--primary-color);
-    color: white;
+    background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)),
+        url('../assets/Banner.jpg');
+    background-size: cover;
+    background-position: center top; /* Asegura que la parte superior sea la que mejor se ve */
+    background-repeat: no-repeat;
+    background-color: #333; /* Fallback si la imagen no carga */
+    
+    color: white; 
     padding: 60px 20px;
 }
 
