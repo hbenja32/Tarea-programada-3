@@ -63,7 +63,7 @@ a:hover {
     linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)),
         url('../assets/Banner.jpg');
     background-size: cover;
-    background-position: center top; /* Asegura que la parte superior sea la que mejor se ve */
+    background-position: center center;
     background-repeat: no-repeat;
     background-color: #333; /* Fallback si la imagen no carga */
     
@@ -171,7 +171,7 @@ a:hover {
         margin: 0 auto 20px;
     }
     .terraria-decoration {
-        width: 45px; 
+        width: 60px; 
         height: auto; 
         vertical-align: middle; 
     }
