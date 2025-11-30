@@ -5,24 +5,18 @@
     --background-color: #F5F0FF; 
     --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Tipografía coherente [cite: 33] */
 }
-/* 1. Definición de la animación de "aparición" */
+/* 1. Definición de la animación */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-/* 2. Aplicación de la animación al cuerpo */
-body {
-    /* Estado inicial: El cuerpo empieza invisible */
+/* 2. Aplicación de la animación al elemento <html> */
+html {
+    /* Estado inicial: El documento empieza invisible */
     opacity: 0; 
     
-    /* Aplicamos la animación: 
-       - fadeIn (el nombre que definimos)
-       - 1.5s (duración de la animación)
-       - ease-in-out (tipo de curva)
-       - forwards (Mantiene el estado final de la animación, opacity: 1)
-    */
-    animation: fadeIn 1.5s ease-in-out forwards;
+    animation: fadeIn 1.5s ease-in-out 0.1s forwards;
 }
 
 * {
