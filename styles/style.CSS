@@ -171,7 +171,7 @@ a:hover {
         margin: 0 auto 20px;
     }
     .terraria-decoration {
-        width: 50px; 
+        width: 60px; 
         height: auto; 
         vertical-align: middle; 
     }
@@ -180,5 +180,13 @@ a:hover {
     }
     .right-icon {
         margin-left: 15px; 
+    }
+    @media (max-width: 768px) {
+    /* Redefinimos el tamaño de los iconos de decoración solo en móviles */
+    .terraria-decoration {
+        width: 35px; /* Reducimos el tamaño de 60px a 35px para móviles */
+        margin-right: 5px; /* Reducimos el margen para que no se separen tanto */
+        margin-left: 5px;
+        }
     }
 }
