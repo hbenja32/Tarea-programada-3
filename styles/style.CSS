@@ -170,4 +170,15 @@ a:hover {
         max-width: 800px;
         margin: 0 auto 20px;
     }
+    .terraria-decoration {
+        width: 45px; 
+        height: auto; 
+        vertical-align: middle; 
+    }
+    .left-icon {
+        margin-right: 15px; 
+    }
+    .right-icon {
+        margin-left: 15px; 
+    }
 }
