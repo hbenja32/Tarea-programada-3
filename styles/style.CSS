@@ -183,5 +183,15 @@ a:hover {
         max-width: 800px;
         margin: 0 auto 20px;
     }
+    .documentation-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    }
+
+    .documentation-content ul {
+    margin-top: 15px;
+    padding-left: 25px; /* Añade espacio para las viñetas */
+    }
     
 }
